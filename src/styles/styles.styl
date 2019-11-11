@@ -1,0 +1,196 @@
+/* VARIABLES */
+
+containerWidth = 1320px
+red = #ED2024
+grey = #707070
+black = #323031
+
+/* GLOBAL */
+
+body 
+  margin 0 
+
+*
+  font-family Lato 
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+
+.container 
+  max-width containerWidth
+  margin 0 auto
+  padding 0 15px
+
+.row
+  width 100%
+
+a 
+  text-decoration none
+
+/* HEADER */
+
+.page-header 
+  background #000
+  height 80px
+  display flex
+  justify-content flex-start
+  align-items center
+
+.page-logo 
+  max-width 124px
+  margin-left 20px
+
+/* SEARCH BAR */
+
+.search-bar
+  max-width (containerWidth / 3 * 2)
+  margin 30px 0
+  display flex
+  flex-flow column wrap
+
+.search-bar__title 
+  font-size 20px
+
+.search-bar__input
+  height 45px
+  border 1px solid grey
+  margin-top 15px
+  font-size 20px
+  padding: 0 5px
+
+  &::placeholder
+    color rgba(black .75)
+    
+.news-list-title 
+  font-size 20px
+  font-weight normal
+  width 100%
+  border-bottom 1px solid black
+  padding-bottom 10px
+
+/* NEWS */
+
+.news
+  display flex
+  flex-wrap wrap
+
+.news-single
+  width 100%
+  height 244px
+  display flex
+  flex-direction column
+  justify-content space-evenly
+  background #ffffff
+  border 1px solid grey
+  padding 5px 10px
+  margin-bottom 15px
+
+.news-single-top 
+  display flex
+  justify-content space-between
+
+.news-section-name
+  color grey
+  font-size 15px
+  margin 0
+
+.news-date
+  color black
+  font-size 15px
+  margin 0
+
+.news-title-wrapper
+  flex-grow 1
+  margin-top 25px
+
+.news-title
+  color black
+  font-size 25px
+  font-weight bold
+  
+.news-more-button
+  background red
+  padding 5px 14px
+  color #fff
+  font-size 15px
+  font-weight bold
+  float right
+
+.loading-results, .no-results-info
+  font-size 30px
+  font-weight bold
+  color grey
+
+/* PAGINATION */
+
+.news-pagination
+  width 100%
+  position relative
+
+  p
+    font-size 25px
+
+.page-select 
+  width 100%
+  font-size 15px
+  border 1px solid grey
+  background transparent
+  height 33px
+  margin-bottom 50px
+  padding-left 5px
+  -webkit-appearance none
+
+.arrow
+  height 10px
+  width 10px
+  background white
+  border-style solid
+  border-color #000
+  border-width 0px 1px 1px 0px
+  transform rotate(45deg)
+  position absolute
+  top 63px
+  right 10px
+
+/* MEDIA QUERIES */ 
+
+@media (min-width: 1320px)
+  .container 
+    padding 0
+
+  .search-bar
+    margin 50px 0
+
+  .search-bar__title
+    font-size 25px
+
+  .news-list-title 
+    display none
+
+  .search-bar
+    margin 50px 0
+
+  .news-single
+    max-width 410px
+    height 471px
+    box-shadow 0px 3px 6px rgba(#000 0.35)
+    padding 15px 10px 30px 10px
+    border 0
+
+  .news-single:nth-child(2), .news-single:nth-child(5), .news-single:nth-child(8)
+    margin 0 15px
+
+  .news-title
+    font-size 45px
+    font-weight normal
+
+  .news-date, .news-section-name, .news-more-button
+    font-size 25px
+
+  .news-more-button
+    padding 10px 14px
+  .news-pagination
+    max-width 354px
+    float right
+
+  .arrow
+    top 88px
